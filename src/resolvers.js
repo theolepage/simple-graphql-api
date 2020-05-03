@@ -15,8 +15,8 @@ const sailors = [
 
 module.exports = {
     Query: {
-        ships: async (_, __, ___) => ships,
-        ship: async (_, { name }, ___) => ships.find(ship => ship.name === name),
+        ships: (_, __, ___) => ships,
+        ship: (_, { name }, ___) => ships.find(ship => ship.name === name),
     },
     Ship: {
         sailor: (parent) => sailors.find(sailor => sailor.name === parent.sailor)
