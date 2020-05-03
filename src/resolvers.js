@@ -19,8 +19,6 @@ module.exports = {
         ship: async (_, { name }, ___) => ships.find(ship => ship.name === name),
     },
     Ship: {
-        sailor(parent) {
-            return sailors.find(sailor => sailor.name === parent.sailor);
-        }
+        sailor: (parent) => sailors.find(sailor => sailor.name === parent.sailor)
     }
 };
